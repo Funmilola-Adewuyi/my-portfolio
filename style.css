@@ -1,0 +1,13 @@
+body{
+    background-color: rgb(244, 151, 244);
+    color: #fff;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    color: purple;
+    font-size: 30px;
+    text-align: center;
+}
