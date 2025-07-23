@@ -1,0 +1,77 @@
+Travel Itinerary
+✈️ Travel Itinerary Coordination
+Planned and created a detailed travel itinerary for a CEO’s business trip. This included flight research, hotel booking options, meeting schedules, and transport arrangements. Designed a clear, professional layout using Canva, ensuring everything was organized, time-efficient, and easy to follow. The result? A stress-free, CEO-ready travel plan delivered on time.
+
+
+📧 Partnership Email Response Drafting
+Composed a professional email response to a partnership inquiry, ensuring the message was clear, polite, and aligned with brand tone.
+
+
+📅 Calendar Management
+Created a structured weekly calendar using screenshots and planning tools to help CEOs stay on top of meetings, deadlines, and key priorities.
+
+
+🔍 Quick Research Task
+Conducted fast, targeted online research to gather relevant info for business decisions — including tools, services, or vendors.
+
+
+📝 Daily Brief Template Creation
+Designed a daily update format to keep executives informed on key tasks, priorities, and updates in a clean, digestible format.
+
+
+📋 Notion Command Center Setup
+Built a Notion-based Weekly Command Center for executive task tracking, priorities, and project overview — showcasing efficiency and system-building skills.
+
+🛠️ Customer Complaint Resolution Workflow (Trello Board)
+Developed and organized a Trello board to manage customer complaint resolutions efficiently. The workflow includes clear stages:
+New Request → In Progress → Waiting on Customer → Resolved → Thank You Mail.
+Each card tracks communication, feedback, and satisfaction status to ensure transparency and resolution. Visual labels and feedback forms were used to monitor service quality, follow-ups, and customer experience — helping improve support and build loyalty.
+
+📬 Email Management
+Efficiently handled professional email correspondence by organizing inboxes, responding to client inquiries, and ensuring timely follow-ups. Prioritized messages, flagged urgent requests, and maintained a clean, action-based email system to support smooth communication and decision-making.
+
+const portfolio = [
+ {
+  image: "",
+  projectTitle: "Travel Itinerary Coordination",
+  projectDes: "Planned and created a detailed travel itinerary for a CEO’s business trip. This included flight research, hotel booking options, meeting schedules, and transport arrangements. Designed a clear, professional layout using Canva, ensuring everything was organized, time-efficient, and easy to follow. The result? A stress-free, CEO-ready travel plan delivered on time."
+ },
+ {
+  image: "",
+  projectTitle: "Partnership Email Response Drafting",
+  projectDes: "Composed a professional email response to a partnership inquiry, ensuring the message was clear, polite, and aligned with brand tone."
+ },
+ {
+  image: "",
+  projectTitle: "Calendar Management",
+  projectDes: "Created a structured weekly calendar using screenshots and planning tools to help CEOs stay on top of meetings, deadlines, and key priorities."
+ },
+ {
+  image: "",
+  projectTitle: "Quick Research Task",
+  projectDes: "Conducted fast, targeted online research to gather relevant info for business decisions — including tools, services, or vendors."
+ },
+ {
+  image: "",
+  projectTitle: "Daily Brief Template Creation",
+  projectDes: "Designed a daily update format to keep executives informed on key tasks, priorities, and updates in a clean, digestible format."
+ },
+ {
+  image: "",
+  projectTitle: "Notion Command Center Setup",
+  projectDes: "Built a Notion-based Weekly Command Center for executive task tracking, priorities, and project overview — showcasing efficiency and system-building skills."
+ },
+ {
+  image: "",
+  projectTitle: "Customer Complaint Resolution Workflow (Trello Board)",
+  projectDes: "Developed and organized a Trello board to manage customer complaint resolutions efficiently. The workflow includes clear stages: <br>
+New Request → In Progress → Waiting on Customer → Resolved → Thank You Mail.<br>
+Each card tracks communication, feedback, and satisfaction status to ensure transparency and resolution. Visual labels and feedback forms were used to monitor service quality, follow-ups, and customer experience — helping improve support and build loyalty.
+"
+ },
+ {
+  image: "",
+  projectTitle: "Email Management",
+  projectDes: "Efficiently handled professional email correspondence by organizing inboxes, responding to client inquiries, and ensuring timely follow-ups. Prioritized messages, flagged urgent requests, and maintained a clean, action-based email system to support smooth communication and decision-making."
+ },
+]
