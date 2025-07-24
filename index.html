@@ -26,6 +26,26 @@
   </head>
 
   <body class="bg-white text-gray-800">
+    <!-- Add this to your HTML body or at the end -->
+    <!-- Alert container -->
+    <div
+      id="formAlert"
+      style="
+        display: none;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background-color: #7608c5;
+        color: #fff;
+        padding: 12px 18px;
+        border-radius: 6px;
+        font-size: 14px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        transition: opacity 0.3s ease;
+      "
+    ></div>
+
     <!-- Header -->
     <header class="bg-white shadow-lg sticky top-0 z-50">
       <nav
@@ -258,6 +278,7 @@
       </div>
     </section>
 
+    <!-- Testimonial -->
     <section id="testimonials" class="text-gray-600 body-font">
       <div class="container px-5 py-24 mx-auto">
         <h2
@@ -279,10 +300,11 @@
                 ></path>
               </svg>
               <p class="leading-relaxed mb-6">
-                Synth chartreuse iPhone lomo cray raw denim brunch everyday
-                carry neutra before they sold out fixie 90's microdosing. Tacos
-                pinterest fanny pack venmo, post-ironic heirloom try-hard pabst
-                authentic iceland.
+                Working with Funmi was a game changer. She took a scattered
+                schedule and turned it into a clear, organized weekly itinerary
+                that made decision-making effortless. Her attention to detail
+                and proactive approach helped me stay focused on my priorities
+                without missing a beat.
               </p>
               <a class="inline-flex items-center">
                 <img
@@ -292,9 +314,9 @@
                 />
                 <span class="flex-grow flex flex-col pl-4">
                   <span class="title-font font-medium text-gray-900"
-                    >Holden Caulfield</span
+                    >Mihan Rachel</span
                   >
-                  <span class="text-gray-500 text-sm">UI DEVELOPER</span>
+                  <span class="text-gray-500 text-sm">Executive Coach</span>
                 </span>
               </a>
             </div>
@@ -312,10 +334,10 @@
                 ></path>
               </svg>
               <p class="leading-relaxed mb-6">
-                Synth chartreuse iPhone lomo cray raw denim brunch everyday
-                carry neutra before they sold out fixie 90's microdosing. Tacos
-                pinterest fanny pack venmo, post-ironic heirloom try-hard pabst
-                authentic iceland.
+                Funmi didn’t just manage emails—she managed expectations. Her
+                swift responses and structured follow-up system made customer
+                satisfaction seamless. I was impressed by how she handled each
+                request on Trello with clarity and professionalism.
               </p>
               <a class="inline-flex items-center">
                 <img
@@ -325,9 +347,11 @@
                 />
                 <span class="flex-grow flex flex-col pl-4">
                   <span class="title-font font-medium text-gray-900"
-                    >Alper Kamu</span
+                    >Sihan O.</span
                   >
-                  <span class="text-gray-500 text-sm">DESIGNER</span>
+                  <span class="text-gray-500 text-sm"
+                    >Online Business Owner</span
+                  >
                 </span>
               </a>
             </div>
@@ -347,82 +371,105 @@
         </div>
         <div class="lg:w-1/2 md:w-2/3 mx-auto">
           <div class="flex flex-wrap -m-2">
-            <div class="p-2 w-1/2">
-              <div class="relative">
-                <label for="name" class="leading-7 text-sm text-gray-600"
-                  >Firstname</label
-                >
-                <input
-                  type="text"
-                  id="fname"
-                  name="fname"
-                  class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                />
+            <form id="contactForm" class="max-w-4xl mx-auto mt-10 px-4 md:px-0">
+              <div class="flex flex-wrap -mx-2">
+                <!-- Firstname -->
+                <div class="p-2 w-full md:w-1/2">
+                  <label
+                    for="fname"
+                    class="block text-sm font-medium text-gray-700 mb-1"
+                    >Firstname<span style="color: red;">*</span></label
+                  >
+                  <input
+                    type="text"
+                    id="fname"
+                    name="fname"
+                    class="w-full rounded-lg border border-gray-300 bg-gray-50 px-4 py-2 text-gray-800 shadow-sm focus:border-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-200 transition"
+                  />
+                </div>
+
+                <!-- Lastname -->
+                <div class="p-2 w-full md:w-1/2">
+                  <label
+                    for="lname"
+                    class="block text-sm font-medium text-gray-700 mb-1"
+                    >Lastname<span style="color: red;">*</span></label
+                  >
+                  <input
+                    type="text"
+                    id="lname"
+                    name="lname"
+                    class="w-full rounded-lg border border-gray-300 bg-gray-50 px-4 py-2 text-gray-800 shadow-sm focus:border-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-200 transition"
+                  />
+                </div>
+
+                <!-- Email -->
+                <div class="p-2 w-full">
+                  <label
+                    for="email"
+                    class="block text-sm font-medium text-gray-700 mb-1"
+                    >Email <span style="color: red;">*</span></label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="w-full rounded-lg border border-gray-300 bg-gray-50 px-4 py-2 text-gray-800 shadow-sm focus:border-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-200 transition"
+                  />
+                </div>
+
+                <!-- Company Name -->
+                <div class="p-2 w-full">
+                  <label
+                    for="companyname"
+                    class="block text-sm font-medium text-gray-700 mb-1"
+                    >Company Name <span style="color: purple; font-size: x-small;"> (Optional)</span></label
+                  >
+                  <input
+                    type="text"
+                    id="companyname"
+                    name="companyname"
+                    class="w-full rounded-lg border border-gray-300 bg-gray-50 px-4 py-2 text-gray-800 shadow-sm focus:border-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-200 transition"
+                  />
+                </div>
+
+                <!-- Message -->
+                <div class="p-2 w-full">
+                  <label
+                    for="message"
+                    class="block text-sm font-medium text-gray-700 mb-1"
+                    >Message<span style="color: red;">*</span></label
+                  >
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    class="w-full rounded-lg border border-gray-300 bg-gray-50 px-4 py-2 text-gray-800 shadow-sm focus:border-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-200 transition resize-none"
+                  ></textarea>
+                </div>
+
+                <!-- Submit -->
+                <div class="p-2 w-full text-center">
+                  <button
+                    type="submit"
+                    class="bg-gradient-to-r from-purple-600 to-purple-800 text-white px-6 py-2 rounded-lg font-semibold shadow hover:scale-105 transition-transform duration-200"
+                  >
+                    Let's Connect
+                  </button>
+                </div>
               </div>
-            </div>
-            <div class="p-2 w-1/2">
-              <div class="relative">
-                <label for="name" class="leading-7 text-sm text-gray-600"
-                  >Lastname</label
-                >
-                <input
-                  type="text"
-                  id="lname"
-                  name="lname"
-                  class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                />
-              </div>
-            </div>
-            <div class="p-2 w-full">
-              <div class="relative">
-                <label for="email" class="leading-7 text-sm text-gray-600"
-                  >Email</label
-                >
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                />
-              </div>
-            </div>
-            <div class="p-2 w-full">
-              <div class="relative">
-                <label for="company name">Company Name</label>
-                <input
-                  type="text"
-                  id="companyname"
-                  name="companyname"
-                  class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                />
-              </div>
-            </div>
-            <div class="p-2 w-full">
-              <div class="relative">
-                <label for="message" class="leading-7 text-sm text-gray-600"
-                  >Message</label
-                >
-                <textarea
-                  id="message"
-                  name="message"
-                  class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
-                ></textarea>
-              </div>
-            </div>
-            <div class="p-2 w-full">
-              <button
-                class="bg-gradient-to-r from-purple-600 to-purple-800 text-white px-5 py-2 rounded-lg font-semibold shadow hover:scale-105 transition-transform duration-200"
-              >
-                Let's Connect
-              </button>
-            </div>
+            </form>
+
             <div
               class="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center"
             >
-              <a class="text-indigo-500">fomolola90@egamil.com</a>
+              <a class="text-indigo-500">fomolola90@gamil.com</a>
               <p class="leading-normal my-5">Lagos, Nigeria</p>
               <span class="inline-flex">
-                <a href="https://www.facebook.com/share/1Xnk2yGYyf/" class="text-gray-500">
+                <a
+                  href="https://www.facebook.com/share/1Xnk2yGYyf/"
+                  class="text-gray-500"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="9.73px"
@@ -435,7 +482,10 @@
                     />
                   </svg>
                 </a>
-                <a href="https://www.linkedin.com/in/funmilola-adewuyi-0225b5161" class="ml-4 text-gray-500">
+                <a
+                  href="https://www.linkedin.com/in/funmilola-adewuyi-0225b5161"
+                  class="ml-4 text-gray-500"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20.93px"
@@ -448,7 +498,10 @@
                     />
                   </svg>
                 </a>
-                <a href="https://www.instagram.com/global_assist_pro?igsh=Y3o2eGFrbDR5amdw" class="ml-4 text-gray-500">
+                <a
+                  href="https://www.instagram.com/global_assist_pro?igsh=Y3o2eGFrbDR5amdw"
+                  class="ml-4 text-gray-500"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20px"
@@ -488,7 +541,6 @@
         <a
           class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900"
         >
-         
           <span class="ml-3 text-xl">UTE-IC</span>
         </a>
         <p
@@ -527,7 +579,10 @@
               ></path>
             </svg>
           </a>
-          <a href="https://www.linkedin.com/in/tunmise-falodun-1894b22a2" class="ml-3 text-black">
+          <a
+            href="https://www.linkedin.com/in/tunmise-falodun-1894b22a2"
+            class="ml-3 text-black"
+          >
             <svg
               fill="currentColor"
               stroke="currentColor"
@@ -545,11 +600,28 @@
             </svg>
           </a>
           <a href="https://github.com/ultimatefaloe" class="ml-3 text-gray-500">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24"><path fill="#000" d="M12.001 2c-5.525 0-10 4.475-10 10a9.99 9.99 0 0 0 6.837 9.488c.5.087.688-.213.688-.476c0-.237-.013-1.024-.013-1.862c-2.512.463-3.162-.612-3.362-1.175c-.113-.288-.6-1.175-1.025-1.413c-.35-.187-.85-.65-.013-.662c.788-.013 1.35.725 1.538 1.025c.9 1.512 2.337 1.087 2.912.825c.088-.65.35-1.087.638-1.337c-2.225-.25-4.55-1.113-4.55-4.938c0-1.088.387-1.987 1.025-2.687c-.1-.25-.45-1.275.1-2.65c0 0 .837-.263 2.75 1.024a9.3 9.3 0 0 1 2.5-.337c.85 0 1.7.112 2.5.337c1.913-1.3 2.75-1.024 2.75-1.024c.55 1.375.2 2.4.1 2.65c.637.7 1.025 1.587 1.025 2.687c0 3.838-2.337 4.688-4.562 4.938c.362.312.675.912.675 1.85c0 1.337-.013 2.412-.013 2.75c0 .262.188.574.688.474A10.02 10.02 0 0 0 22 12c0-5.525-4.475-10-10-10"/></svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20px"
+              height="20px"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="#000"
+                d="M12.001 2c-5.525 0-10 4.475-10 10a9.99 9.99 0 0 0 6.837 9.488c.5.087.688-.213.688-.476c0-.237-.013-1.024-.013-1.862c-2.512.463-3.162-.612-3.362-1.175c-.113-.288-.6-1.175-1.025-1.413c-.35-.187-.85-.65-.013-.662c.788-.013 1.35.725 1.538 1.025c.9 1.512 2.337 1.087 2.912.825c.088-.65.35-1.087.638-1.337c-2.225-.25-4.55-1.113-4.55-4.938c0-1.088.387-1.987 1.025-2.687c-.1-.25-.45-1.275.1-2.65c0 0 .837-.263 2.75 1.024a9.3 9.3 0 0 1 2.5-.337c.85 0 1.7.112 2.5.337c1.913-1.3 2.75-1.024 2.75-1.024c.55 1.375.2 2.4.1 2.65c.637.7 1.025 1.587 1.025 2.687c0 3.838-2.337 4.688-4.562 4.938c.362.312.675.912.675 1.85c0 1.337-.013 2.412-.013 2.75c0 .262.188.574.688.474A10.02 10.02 0 0 0 22 12c0-5.525-4.475-10-10-10"
+              />
+            </svg>
           </a>
         </span>
       </div>
     </footer>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+      (function () {
+        emailjs.init("VdgBd7pSvUnR9weol");
+      })();
+    </script>
+
     <script>
       const services = [
         {
@@ -630,7 +702,7 @@
             "Built a Notion-based Weekly Command Center for executive task tracking, priorities, and project overview — showcasing efficiency and system-building skills.",
         },
         {
-          image: "./images/Customer_complain_Email.png",
+          image: "./images/Customer_Complain_Resolution_Workflow_Trello.png",
           imageAlt: "Customer Complaint Resolution Workflow",
           projectTitle: "Customer Complaint Resolution Workflow (Trello Board)",
           projectDes:
@@ -642,6 +714,12 @@
           projectTitle: "Email Management",
           projectDes:
             "Efficiently handled professional email correspondence by organizing inboxes, responding to client inquiries, and ensuring timely follow-ups. Prioritized messages, flagged urgent requests, and maintained a clean, action-based email system to support smooth communication and decision-making.",
+        },
+        {
+          image: "./images/Slack_Task.png",
+          imageAlt: "Slack",
+          projectTitle: "Slack Task",
+          projectDes: "I communicated with other team members via slack",
         },
       ];
 
@@ -683,6 +761,64 @@
           </p>
         </div>
         `;
+      });
+
+      // Helper to show alert
+      function showAlert(message, color = "#7608c5") {
+        const alertBox = document.getElementById("formAlert");
+        alertBox.textContent = message;
+        alertBox.style.backgroundColor = color;
+        alertBox.style.display = "block";
+        alertBox.style.opacity = 1;
+
+        setTimeout(() => {
+          alertBox.style.opacity = 0;
+          setTimeout(() => {
+            alertBox.style.display = "none";
+          }, 300);
+        }, 1000); // 1 second timeout
+      }
+
+      const submitForm = document.getElementById("contactForm");
+
+      // Form submission
+      submitForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        // Get values from the form
+        const fname = contactForm.fname.value.trim();
+        const lname = contactForm.lname.value.trim();
+        const email = contactForm.email.value.trim();
+        const message = contactForm.message.value.trim();
+
+        // Check for empty fields
+        if (!fname || !lname || !email || !company || !message) {
+          showAlert("Please fill in all fields.", "#e63946"); // red alert
+          return;
+        }
+
+        try {
+          const mailer = await emailjs.sendForm(
+            "service_pvmfrll",
+            "template_it4qbmh",
+            submitForm
+          );
+          const mailer2 = await emailjs.sendForm(
+            "service_pvmfrll",
+            "template_hemedh9",
+            submitForm
+          );
+
+          if (!mailer || !mailer2) {
+            showAlert("Failed to contact Funmilola.", "#e63946");
+          } else {
+            showAlert("Submitted successfully!");
+            submitForm.reset();
+          }
+        } catch (err) {
+          console.error(err);
+          showAlert("Something went wrong. Please try again.", "#e63946");
+        }
       });
     </script>
     <script>
