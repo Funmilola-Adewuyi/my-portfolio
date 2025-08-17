@@ -163,7 +163,11 @@ function openModalHandler(index) {
   // Create modal with blur background and swipe functionality
   const modalHTML = `
           <div id="portfolioModal" class="fixed inset-0 z-50">
-            
+            <!-- Blurred background with current image -->
+                  <div class="absolute inset-0 overflow-hidden">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-lg">
+                    </div>
+                  </div>
             
             <!-- Main modal content at bottom -->
             <div class="fixed bottom-0 left-0 right-0 flex justify-center">
