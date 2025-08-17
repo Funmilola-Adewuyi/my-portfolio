@@ -231,7 +231,7 @@
 
     <!-- Portfolio Section -->
     <section id="portfolio" class="px-4 py-24 mx-auto max-w-7xl">
-      <div class="max-w-6xl mx-auto text-center">
+      <div class="max-w-6xl mx-auto text-center mb-4">
         <h2
           class="text-4xl font-bold text-center text-purple-800 mb-12 text-center"
         >
@@ -378,7 +378,7 @@
                   <label
                     for="fname"
                     class="block text-sm font-medium text-gray-700 mb-1"
-                    >Firstname<span style="color: red;">*</span></label
+                    >Firstname<span style="color: red">*</span></label
                   >
                   <input
                     type="text"
@@ -393,7 +393,7 @@
                   <label
                     for="lname"
                     class="block text-sm font-medium text-gray-700 mb-1"
-                    >Lastname<span style="color: red;">*</span></label
+                    >Lastname<span style="color: red">*</span></label
                   >
                   <input
                     type="text"
@@ -408,7 +408,7 @@
                   <label
                     for="email"
                     class="block text-sm font-medium text-gray-700 mb-1"
-                    >Email <span style="color: red;">*</span></label
+                    >Email <span style="color: red">*</span></label
                   >
                   <input
                     type="email"
@@ -423,7 +423,10 @@
                   <label
                     for="companyname"
                     class="block text-sm font-medium text-gray-700 mb-1"
-                    >Company Name <span style="color: purple; font-size: x-small;"> (Optional)</span></label
+                    >Company Name
+                    <span style="color: purple; font-size: x-small">
+                      (Optional)</span
+                    ></label
                   >
                   <input
                     type="text"
@@ -438,7 +441,7 @@
                   <label
                     for="message"
                     class="block text-sm font-medium text-gray-700 mb-1"
-                    >Message<span style="color: red;">*</span></label
+                    >Message<span style="color: red">*</span></label
                   >
                   <textarea
                     id="message"
@@ -534,6 +537,8 @@
       </div>
     </section>
 
+    <section id="portfolioModal"></section>
+
     <footer class="text-gray-600 body-font">
       <div
         class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col"
@@ -615,230 +620,12 @@
         </span>
       </div>
     </footer>
+
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script>
-      (function () {
-        emailjs.init("VdgBd7pSvUnR9weol");
-      })();
-    </script>
-
-    <script>
-      const services = [
-        {
-          title: "Calendar Management",
-          des: "Organizing and scheduling appointments, reminders, and deadlines to keep your day on track.",
-        },
-        {
-          title: "Email Management",
-          des: "Sorting, responding, and organizing emails to ensure effective communication and follow-ups.",
-        },
-        {
-          title: "Travel Itinerary",
-          des: "Planning and organizing travel details including flights, accommodations, and activities.",
-        },
-        {
-          title: "Data Entry",
-          des: "Accurate input of information into systems, spreadsheets, or databases for easy tracking.",
-        },
-        {
-          title: "Task Coordination",
-          des: "Managing and assigning tasks to ensure deadlines are met and priorities are clear.",
-        },
-        {
-          title: "Presentation",
-          des: "Creating polished, professional slides and visuals to support your ideas and messages.",
-        },
-        {
-          title: "Research",
-          des: "Gathering relevant information to support decision-making or provide insights for your business.",
-        },
-        {
-          title: "Meeting & Appointment Scheduling",
-          des: "Coordinating meeting times and booking appointments to fit everyone's calendar.",
-        },
-      ];
-
-      const portfolios = [
-        {
-          image: "./images/Travel_intinery.png",
-          imageAlt: "Travel Itinerary Coordination",
-          projectTitle: "Travel Itinerary Coordination",
-          projectDes:
-            "Planned and created a detailed travel itinerary for a CEO’s business trip. This included flight research, hotel booking options, meeting schedules, and transport arrangements. Designed a clear, professional layout using Canva, ensuring everything was organized, time-efficient, and easy to follow. The result? A stress-free, CEO-ready travel plan delivered on time.",
-        },
-        {
-          image: "./images/Partnership_Response_Email.png",
-          imageAlt: "Partnership Email Response Drafting",
-          projectTitle: "Partnership Email Response Drafting",
-          projectDes:
-            "Composed a professional email response to a partnership inquiry, ensuring the message was clear, polite, and aligned with brand tone.",
-        },
-        {
-          image: "./images/CEO A Calendar.png",
-          imageAlt: "Calendar Management",
-          projectTitle: "Calendar Management",
-          projectDes:
-            "Created a structured weekly calendar using screenshots and planning tools to help CEOs stay on top of meetings, deadlines, and key priorities.",
-        },
-        {
-          image: "./images/Research_Event.png",
-          imageAlt: "Quick Research Task",
-          projectTitle: "Quick Research Task",
-          projectDes:
-            "Conducted fast, targeted online research to gather relevant info for business decisions — including tools, services, or vendors.",
-        },
-        {
-          image: "./images/Daily Task Brief for CEO A.png",
-          imageAlt: "Daily Brief Template Creation",
-          projectTitle: "Daily Brief Template Creation",
-          projectDes:
-            "Designed a daily update format to keep executives informed on key tasks, priorities, and updates in a clean, digestible format.",
-        },
-        {
-          image: "./images/Notion_Task.png",
-          imageAlt: "Notion Command Center Setup",
-          projectTitle: "Notion Command Center Setup",
-          projectDes:
-            "Built a Notion-based Weekly Command Center for executive task tracking, priorities, and project overview — showcasing efficiency and system-building skills.",
-        },
-        {
-          image: "./images/Customer_Complain_Resolution_Workflow_Trello.png",
-          imageAlt: "Customer Complaint Resolution Workflow",
-          projectTitle: "Customer Complaint Resolution Workflow (Trello Board)",
-          projectDes:
-            "Developed and organized a Trello board to manage customer complaint resolutions efficiently. The workflow includes clear stages: <br> New Request → In Progress → Waiting on Customer → Resolved → Thank You Mail.<br> Each card tracks communication, feedback, and satisfaction status to ensure transparency and resolution. Visual labels and feedback forms were used to monitor service quality, follow-ups, and customer experience — helping improve support and build loyalty.",
-        },
-        {
-          image: "./images/Email_Management.png",
-          imageAlt: "Email Management",
-          projectTitle: "Email Management",
-          projectDes:
-            "Efficiently handled professional email correspondence by organizing inboxes, responding to client inquiries, and ensuring timely follow-ups. Prioritized messages, flagged urgent requests, and maintained a clean, action-based email system to support smooth communication and decision-making.",
-        },
-        {
-          image: "./images/Slack_Task.png",
-          imageAlt: "Slack",
-          projectTitle: "Slack Task",
-          projectDes: "I communicated with other team members via slack",
-        },
-      ];
-
-      const service_list = document.getElementById("sub_services");
-      services.forEach((service) => {
-        service_list.innerHTML += `
-                <div
-                  class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition"
-                >
-                  <h3 class="text-xl font-semibold mb-2">
-                    ${service.title}
-                  </h3>
-                  <p class="text-gray-600">
-                    ${service.des}
-                  </p>
-                </div>
-              `;
-      });
-
-      const portfolio_list = document.getElementById("sub_portfolio");
-      portfolios.forEach((portfolio) => {
-        portfolio_list.innerHTML += `
-          <div>
-          <a href="#">
-            <img
-              src="${portfolio.image}"
-              class="object-cover w-full h-56 mb-5 bg-center rounded"
-              alt="${portfolio.imageAlt}"
-              loading="lazy"
-            />
-          </a>
-          <h2 class="mb-2 text-lg font-semibold text-gray-900">
-            <a href="#" class="text-gray-900 hover:text-purple-700"
-              >${portfolio.projectTitle}</a
-            >
-          </h2>
-          <p class="mb-3 text-sm font-normal text-gray-500">
-            ${portfolio.projectDes}
-          </p>
-        </div>
-        `;
-      });
-
-      // Helper to show alert
-      function showAlert(message, color = "#7608c5") {
-        const alertBox = document.getElementById("formAlert");
-        alertBox.textContent = message;
-        alertBox.style.backgroundColor = color;
-        alertBox.style.display = "block";
-        alertBox.style.opacity = 1;
-
-        setTimeout(() => {
-          alertBox.style.opacity = 0;
-          setTimeout(() => {
-            alertBox.style.display = "none";
-          }, 300);
-        }, 1000); // 1 second timeout
-      }
-
-      const submitForm = document.getElementById("contactForm");
-
-      // Form submission
-      submitForm.addEventListener("submit", async (e) => {
-        e.preventDefault();
-
-        // Get values from the form
-        const fname = contactForm.fname.value.trim();
-        const lname = contactForm.lname.value.trim();
-        const email = contactForm.email.value.trim();
-        const message = contactForm.message.value.trim();
-
-        // Check for empty fields
-        if (!fname || !lname || !email || !company || !message) {
-          showAlert("Please fill in all fields.", "#e63946"); // red alert
-          return;
-        }
-
-        try {
-          const mailer = await emailjs.sendForm(
-            "service_pvmfrll",
-            "template_it4qbmh",
-            submitForm
-          );
-          const mailer2 = await emailjs.sendForm(
-            "service_pvmfrll",
-            "template_hemedh9",
-            submitForm
-          );
-
-          if (!mailer || !mailer2) {
-            showAlert("Failed to contact Funmilola.", "#e63946");
-          } else {
-            showAlert("Submitted successfully!");
-            submitForm.reset();
-          }
-        } catch (err) {
-          console.error(err);
-          showAlert("Something went wrong. Please try again.", "#e63946");
-        }
-      });
-    </script>
-    <script>
-      const toggleButton = document.getElementById("menu-toggle");
-      const mobileMenu = document.getElementById("mobile-menu");
-
-      toggleButton.addEventListener("click", (e) => {
-        e.stopPropagation();
-        mobileMenu.classList.toggle("hidden");
-      });
-
-      window.addEventListener("click", (e) => {
-        const isClickInsideMenu = mobileMenu.contains(e.target);
-        const isClickOnToggle = toggleButton.contains(e.target);
-        if (!isClickInsideMenu && !isClickOnToggle) {
-          mobileMenu.classList.add("hidden");
-        }
-      });
-
-      lucide.createIcons();
-    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1"
+      type="module"
+    ></script>
+    <script src="./script.js"></script>
   </body>
 </html>
